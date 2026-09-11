@@ -159,7 +159,7 @@ export function LoginPage() {
   };
 
   return (
-    <div className="grain relative grid min-h-[100dvh] lg:grid-cols-[.94fr_1.06fr]">
+    <div className="grain relative flex min-h-[100dvh] flex-col lg:grid lg:grid-cols-[.94fr_1.06fr]">
       <div className="login-hero relative flex flex-col justify-between overflow-hidden p-7 text-white md:p-12">
         <div className="pointer-events-none absolute inset-0 login-hero-orbs" />
         <div className="relative">
@@ -172,7 +172,7 @@ export function LoginPage() {
               <div className="font-mono-ui text-[9px] uppercase tracking-[.24em] text-[#f1d27a]">AI CRM</div>
             </div>
           </Link>
-          <div className="mt-24 max-w-md md:mt-32">
+          <div className="mt-12 max-w-md sm:mt-16 md:mt-32">
             <div className="mb-5 font-mono-ui text-[10px] uppercase tracking-[.24em] text-[#f1d27a]">
               Revenue, with context.
             </div>
@@ -199,7 +199,7 @@ export function LoginPage() {
         </div>
       </div>
 
-      <div className="relative flex items-center justify-center bg-background p-6 md:p-12">
+      <div className="relative flex items-center justify-center bg-background p-6 pb-28 md:p-12 lg:pb-12">
         <div className="w-full max-w-[390px]">
           <div className="mb-10">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7edd4] text-[#7a4d00]">
