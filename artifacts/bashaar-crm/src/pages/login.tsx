@@ -24,12 +24,16 @@ const mapsUrl =
 const whatsappUrl = 'https://wa.me/923405494527';
 const instagramUrl = 'https://www.instagram.com/bashaar';
 
-function LoginFooter() {
+function LoginFooter({ dark = true }: { dark?: boolean }) {
   return (
-    <div className="mt-16 grid gap-8 border-t border-white/10 pt-6 sm:grid-cols-2">
+    <div
+      className={`mt-16 grid gap-8 border-t pt-6 sm:grid-cols-2 ${
+        dark ? 'border-white/10' : 'border-border'
+      }`}
+    >
       <div>
         <div className="font-mono-ui text-[10px] uppercase tracking-[.24em] text-[hsl(var(--accent))]">Visit</div>
-        <div className="mt-3 space-y-1.5 text-[12px] leading-6 text-white/75">
+        <div className={`mt-3 space-y-1.5 text-[12px] leading-6 ${dark ? 'text-white/75' : 'text-muted-foreground'}`}>
           <div className="flex items-start gap-2">
             <MapPin size={14} className="mt-1 shrink-0 text-[hsl(var(--accent))]" />
             <div>
@@ -42,7 +46,9 @@ function LoginFooter() {
             href={mapsUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-white/80 transition-colors hover:text-[hsl(var(--accent))]"
+            className={`mt-2 inline-flex items-center gap-1.5 text-[11px] font-bold transition-colors hover:text-[hsl(var(--accent))] ${
+              dark ? 'text-white/80' : 'text-foreground'
+            }`}
             data-testid="link-login-maps"
           >
             View on Google Maps <ExternalLink size={12} />
@@ -56,7 +62,9 @@ function LoginFooter() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-white/75 transition-colors hover:text-[hsl(var(--accent))]"
+            className={`flex items-center gap-2 transition-colors hover:text-[hsl(var(--accent))] ${
+              dark ? 'text-white/75' : 'text-muted-foreground'
+            }`}
             data-testid="link-login-whatsapp"
           >
             <MessageCircle size={14} className="text-[hsl(var(--accent))]" />
@@ -66,7 +74,9 @@ function LoginFooter() {
             href={instagramUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-white/75 transition-colors hover:text-[hsl(var(--accent))]"
+            className={`flex items-center gap-2 transition-colors hover:text-[hsl(var(--accent))] ${
+              dark ? 'text-white/75' : 'text-muted-foreground'
+            }`}
             data-testid="link-login-instagram"
           >
             <Instagram size={14} className="text-[hsl(var(--accent))]" />
@@ -344,7 +354,7 @@ export function LoginPage() {
             </div>
           </div>
           <div className="lg:hidden">
-            <LoginFooter />
+            <LoginFooter dark={false} />
           </div>
         </div>
       </div>
