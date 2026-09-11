@@ -1,0 +1,11 @@
+{
+  "installCommand": "npm install",
+  "buildCommand": "BASE_PATH=/ PORT=5173 npm run build --workspace=@workspace/bashaar-crm",
+  "outputDirectory": "artifacts/bashaar-crm/dist/public",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

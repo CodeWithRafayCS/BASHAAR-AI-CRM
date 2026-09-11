@@ -1,0 +1,98 @@
+## Bashaar AI CRM — Workspace Improvements & Functional Fixes
+
+The website looks excellent overall. I have identified a few areas that need improvement and additional functionality. Please review and fix the following issues while maintaining the existing design, structure, and overall premium look of the CRM.
+
+### 1. Workspace
+
+#### i. Overview
+
+* The **Search** function should work properly across the relevant data.
+* The **“+” button** on the left sidebar should perform its intended action correctly.
+* The **Notification button** should be fully functional and display relevant notifications.
+
+#### ii. Leads
+
+* The **Search** function is already working correctly.
+* The **All Owners** filter should automatically update whenever a new lead is added.
+
+  * If a newly added lead has a new owner, that owner should automatically appear in the **All Owners** dropdown.
+* The **Clear** button in the filters should properly reset all selected filters and return the lead list to its default state.
+* Make sure all lead filters work correctly together without causing inconsistent results.
+
+#### iii. Pipeline
+
+* The **Filter View** button should be fully functional.
+* Users should be able to filter pipeline data correctly based on the available filter options.
+* The pipeline view should update immediately when filters are applied or cleared.
+
+#### iv. Tasks
+
+Improve the overall usability of the **Tasks** tab.
+
+* Make task management more intuitive and organized.
+* Users should be able to open and view task details properly.
+* Provide clear actions for completing, editing, deleting, and updating tasks where appropriate.
+* Make overdue, upcoming, and completed tasks easy to distinguish.
+* Improve the overall workflow so managing multiple tasks feels simple and efficient.
+
+#### v. Activities
+
+Review the **Activities** tab and improve it wherever necessary.
+
+* Ensure activity logging and viewing are fully functional.
+* Make the activity timeline clear and easy to understand.
+* Ensure activities are properly associated with the relevant leads, companies, deals, or users.
+* Add any small usability improvements you believe would make the Activities section more useful for daily CRM operations.
+
+---
+
+### 2. Workspace Data
+
+#### i. Companies
+
+**Working well — no major changes required.**
+
+#### ii. Deals
+
+**Working well — no major changes required.**
+
+#### iii. Reports
+
+* The **Export View** button should be fully functional.
+* Users should be able to export the currently displayed report/data correctly.
+* The exported data should reflect the selected filters and current view.
+
+#### iv. Team
+
+Review the **Team** section and improve it where useful.
+
+* Think about additional functionality that would make team management more effective.
+* Consider useful features such as team member status, role visibility, activity overview, permissions, or other CRM-relevant management tools.
+* Keep any additions practical and consistent with the existing CRM requirements.
+
+#### v. Settings
+
+The **Settings** section requires additional functionality.
+
+**Notifications**
+
+* The Notifications tab must be fully functional.
+* All available notification settings and controls should work correctly.
+* Users should be able to manage their notification preferences.
+
+**Team Access**
+
+* Add a complete **Team Access** functionality.
+* Administrators/managers should be able to control what different team members can access.
+* Access should respect the CRM roles and permissions.
+* Make the interface simple and clear so administrators can easily manage team access.
+
+---
+
+### Final Requirement
+
+Fix all of the above functionality **without breaking any existing features**.
+
+Maintain the current **Bashaar AI CRM** design language, including its premium, modern, clean, and professional appearance. All buttons, filters, dropdowns, searches, notifications, exports, permissions, and actions should work with real application state/data rather than being visual placeholders.
+
+Before considering the work complete, test each feature and make sure the entire Workspace experience works smoothly on both desktop and mobile.

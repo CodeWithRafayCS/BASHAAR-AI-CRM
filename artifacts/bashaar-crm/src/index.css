@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-mono: var(--app-font-mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 40 40% 98%;
+  --foreground: 222 47% 8%;
+  --border: 38 22% 84%;
+  --input: 38 20% 80%;
+  --ring: 42 72% 44%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 8%;
+  --card-border: 38 20% 88%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 8%;
+  --primary: 38 48% 16%;
+  --primary-foreground: 42 45% 96%;
+  --secondary: 40 28% 93%;
+  --secondary-foreground: 222 47% 8%;
+  --muted: 40 24% 94%;
+  --muted-foreground: 222 18% 28%;
+  --accent: 42 74% 48%;
+  --accent-foreground: 38 48% 14%;
+  --destructive: 2 68% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --chart-1: 42 74% 48%;
+  --chart-2: 38 48% 16%;
+  --chart-3: 168 42% 32%;
+  --chart-4: 24 72% 48%;
+  --chart-5: 222 28% 28%;
+  --sidebar: 36 42% 16%;
+  --sidebar-foreground: 42 38% 96%;
+  --sidebar-border: 36 32% 24%;
+  --sidebar-primary: 42 74% 52%;
+  --sidebar-primary-foreground: 38 48% 12%;
+  --sidebar-accent: 36 36% 22%;
+  --sidebar-accent-foreground: 42 38% 96%;
+  --sidebar-ring: 42 74% 52%;
+  --app-font-sans: 'Manrope', sans-serif;
+  --app-font-mono: 'DM Mono', monospace;
+  --radius: 0.7rem;
+  --shadow-sm: 0 2px 10px rgba(48, 36, 12, 0.06);
+  --shadow-md: 0 12px 32px rgba(48, 36, 12, 0.10);
+  --shadow-modal: 0 8px 18px rgba(48, 36, 12, 0.08), 0 24px 60px rgba(48, 36, 12, 0.16);
+}
+
+.dark {
+  --background: 40 40% 98%;
+  --foreground: 222 47% 8%;
+  --border: 38 22% 84%;
+  --input: 38 20% 80%;
+  --ring: 42 72% 44%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 8%;
+  --card-border: 38 20% 88%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 8%;
+  --primary: 38 48% 16%;
+  --primary-foreground: 42 45% 96%;
+  --secondary: 40 28% 93%;
+  --secondary-foreground: 222 47% 8%;
+  --muted: 40 24% 94%;
+  --muted-foreground: 222 18% 28%;
+  --accent: 42 74% 48%;
+  --accent-foreground: 38 48% 14%;
+  --destructive: 2 68% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --sidebar: 36 42% 16%;
+  --sidebar-foreground: 42 38% 96%;
+  --sidebar-border: 36 32% 24%;
+  --sidebar-primary: 42 74% 52%;
+  --sidebar-primary-foreground: 38 48% 12%;
+  --sidebar-accent: 36 36% 22%;
+  --sidebar-accent-foreground: 42 38% 96%;
+  --sidebar-ring: 42 74% 52%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply font-sans antialiased text-foreground;
+    background: hsl(var(--background));
+    min-height: 100dvh;
+    color: hsl(var(--foreground));
+  }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer utilities {
+  .font-mono-ui { font-family: var(--app-font-mono); }
+  .text-balance { text-wrap: balance; }
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+    z-index: 20;
+  }
+}
+
+@keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@keyframes crm-overlay-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes crm-overlay-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes crm-panel-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes crm-panel-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(16px); }
+}
+.animate-rise { animation: rise-in .45s ease both; }
+.skeleton { background: linear-gradient(100deg, hsl(var(--muted)) 30%, hsl(var(--card)) 50%, hsl(var(--muted)) 70%); background-size: 200% 100%; animation: shimmer 1.6s ease infinite; }
+
+/* Standard modal overlay: dim background, no blur. Header/footer stay
+   fixed via the flex column in crm-modal.tsx and only the middle content
+   scrolls, so the footer (Cancel/Create buttons) is always visible and
+   never gets clipped, on mobile or desktop. */
+.crm-modal-overlay {
+  background: rgba(15, 23, 42, .46);
+  animation: crm-overlay-in .18s ease both;
+}
+.crm-modal-overlay-leave { animation: crm-overlay-out .16s ease both; }
+.crm-modal-panel { animation: crm-panel-in .2s cubic-bezier(.2,.8,.2,1) both; }
+.crm-modal-leave { animation: crm-panel-out .16s ease both; }
+
+body:has(.crm-modal-overlay) {
+  overflow: hidden;
+}
+body:has(.crm-modal-overlay) .grain::after {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .crm-modal-overlay,
+  .crm-modal-overlay-leave,
+  .crm-modal-panel,
+  .crm-modal-leave { animation: none !important; }
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #c9a227 0%, #d4af37 48%, #f1d27a 100%);
+  color: #1c160c;
+  box-shadow: 0 8px 20px rgba(184, 148, 42, .22);
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+.btn-gradient:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 12px 26px rgba(184, 148, 42, .28);
+}
+.login-hero {
+  background:
+    linear-gradient(165deg, rgba(28, 22, 12, .35), rgba(28, 22, 12, .08)),
+    radial-gradient(800px 420px at 18% 12%, rgba(212, 175, 55, .28), transparent 58%),
+    linear-gradient(180deg, #2a2112 0%, #1c160c 100%);
+}
+.login-hero-orbs {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(241, 210, 122, .18), transparent 32%),
+    radial-gradient(circle at 82% 70%, rgba(201, 162, 39, .14), transparent 28%);
+}
+.whatsapp-fab {
+  background: linear-gradient(180deg, #d4af37 0%, #c9a227 100%);
+}
+.whatsapp-fab:hover {
+  background: linear-gradient(180deg, #e3c04a 0%, #d4af37 100%);
+}
